@@ -3,7 +3,7 @@ Cktwitter
 
 Sample Twitter IOS App
 Animated Gif 
-<img src="" />
+<img src="https://github.com/cre81ve/Cktwitter/blob/master/twitter_lcap_2.gif" />
 
 <b>Items Done</b>
 ===========
