@@ -1,9 +1,13 @@
 Cktwitter
 =========
 
+
 Sample Twitter IOS App
-Animated Gif 
-<img src="https://github.com/cre81ve/Cktwitter/blob/master/twitter_lcap_2.gif" />
+<h4> Time taken : 9h 30m </h4>
+
+- <b>Animated Gif <b>
+
+- <img src="https://github.com/cre81ve/Cktwitter/blob/master/twitter_lcap_2.gif" />
 
 <b>Items Done</b>
 ===========
