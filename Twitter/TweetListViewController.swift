@@ -26,14 +26,14 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     
     var counter:Int? = 20
     var called:Bool = false
-    var dicParams:NSDictionary = NSDictionary()
+    var tweetParams:NSDictionary = NSDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tweetsTable.delegate = self
         tweetsTable.dataSource = self
         tweetsTable.rowHeight = UITableViewAutomaticDimension
-        dicParams = ["count" : "100"]
+        tweetParams = ["count" : "100"]
 
         tweetsTable.hidden = true
         refreshTweets()
@@ -62,7 +62,7 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     }
     
     func refreshTweets() {
-        refreshTweetsWithParams(dicParams)
+        refreshTweetsWithParams(tweetParams)
     }
     
     func refreshTweetsWithParams(params:NSDictionary) {
@@ -213,7 +213,7 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
 //            NSLog("Calling refresh on scroll....")
 //            refreshTweetsWithParams(["count": String(counter!)])
 //            called = true
-//            dicParams = ["count" : counter!]
+//            tweetParams = ["count" : counter!]
 //        }
 //    }
 //    
