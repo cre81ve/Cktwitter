@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Twitter.TwitterClient.(tweetsHomeTimeLineWithParams (Twitter.TwitterClient) -&gt; (Swift.Optional&lt;ObjectiveC.NSDictionary&gt;, completion : (tweets : Swift.Optional&lt;Swift.Array&lt;Twitter.Tweet&gt;&gt;, error : Swift.Optional&lt;ObjectiveC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1):TwitterClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response[&quot;user&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
