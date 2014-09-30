@@ -24,12 +24,17 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     var tweets = [Tweet]()
     var refreshControl:UIRefreshControl = UIRefreshControl()
     
+    var counter:Int? = 20
+    var called:Bool = false
+    var dicParams:NSDictionary = NSDictionary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tweetsTable.delegate = self
         tweetsTable.dataSource = self
         tweetsTable.rowHeight = UITableViewAutomaticDimension
-        
+        dicParams = ["count" : "100"]
+
         tweetsTable.hidden = true
         refreshTweets()
         
@@ -57,8 +62,12 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     }
     
     func refreshTweets() {
+        refreshTweetsWithParams(dicParams)
+    }
+    
+    func refreshTweetsWithParams(params:NSDictionary) {
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        Tweet.tweetsHomeTimeLineWithParams(nil, completion: { (tweets, error) -> () in
+        Tweet.tweetsHomeTimeLineWithParams(params, completion: { (tweets, error) -> () in
             if(tweets != nil) {
                 self.tweets = tweets!
                 for tw in tweets! {
@@ -103,7 +112,7 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     
     @IBOutlet var onFavourite: UITapGestureRecognizer!
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return tweets.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -193,7 +202,21 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
         
     }
     
+    // infinite scroll.
     
+//    func scrollViewDidScroll(scrollView: UIScrollView) {
+//        var actual:CGFloat = scrollView.contentOffset.y
+//        var contentHeight:CGFloat = scrollView.contentSize.height - 5
+//        NSLog("Actual is \(actual) , Height is \(contentHeight)")
+//        if(actual >= contentHeight/2 && !called) {
+//            counter = counter! + 100
+//            NSLog("Calling refresh on scroll....")
+//            refreshTweetsWithParams(["count": String(counter!)])
+//            called = true
+//            dicParams = ["count" : counter!]
+//        }
+//    }
+//    
     
     /*
     // MARK: - Navigation

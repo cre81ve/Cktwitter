@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Twitter/Tweet.swift"
-            timestampString = "433753569.111712"
+            filePath = "Twitter/TweetListViewController.swift"
+            timestampString = "433780400.659199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "init(dictionary:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "refreshTweetsWithParams(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,75 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Twitter/TweetDetailController.swift"
-            timestampString = "433753569.111712"
+            filePath = "Twitter/TweetListViewController.swift"
+            timestampString = "433780400.659199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "refreshTweetsWithParams(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Twitter.TweetListViewController.(refreshTweetsWithParams (Twitter.TweetListViewController) -&gt; (ObjectiveC.NSDictionary) -&gt; ()).(closure #1)"
+                  moduleName = "Twitter"
+                  urlString = "file:///Users/chaitanya/CK/bootcamp/Twitter2/Twitter/TweetListViewController.swift"
+                  timestampString = "433779476.083796"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Twitter.TweetListViewController.(refreshTweetsWithParams (Twitter.TweetListViewController) -&gt; (ObjectiveC.NSDictionary) -&gt; ()).(closure #1)"
+                  moduleName = "Twitter"
+                  urlString = "file:///Users/chaitanya/CK/bootcamp/Twitter2/Twitter/TweetListViewController.swift"
+                  timestampString = "433779476.085356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1569">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitter/Tweet.swift"
+            timestampString = "433777742.540134"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "tweetsHomeTimeLineWithParams(_:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitter/TwitterClient.swift"
+            timestampString = "433777771.127567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "tweetsHomeTimeLineWithParams(_:completion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
