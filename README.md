@@ -6,8 +6,9 @@ Sample Twitter IOS App
 <h4> Time taken : 9h 30m </h4>
 
 - <b>Animated Gif <b>
-
-- <img src="https://github.com/cre81ve/Cktwitter/blob/master/twitter_lcap_2.gif" />
+<table><tr><td<img src="https://github.com/cre81ve/Cktwitter/blob/master/twitter_lcap_2.gif" />
+</td><td><img src="https://github.com/cre81ve/Cktwitter/blob/master/infinitescroll.gif" />
+</td></tr></table>
 
 <b>Items Done</b>
 ===========
