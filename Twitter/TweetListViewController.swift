@@ -25,6 +25,7 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
     var refreshControl:UIRefreshControl = UIRefreshControl()
     
     var counter:Int? = 20
+     var defaultCount:Int? = 20
     var called:Bool = false
     var tweetParams:NSDictionary = NSDictionary()
     
@@ -33,7 +34,7 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
         tweetsTable.delegate = self
         tweetsTable.dataSource = self
         tweetsTable.rowHeight = UITableViewAutomaticDimension
-        tweetParams = ["count" : "100"]
+//        tweetParams = ["count" : "100"]
 
         tweetsTable.hidden = true
         refreshTweets()
@@ -44,7 +45,25 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
         self.tweetsTable.insertSubview(refreshControl, atIndex: 0)
         Store.store("reply.name", val: "")
         Store.store("reply.id" , val: "")
+        
+        
+        //infinite scrolling 
+        
+        self.tweetsTable.addInfiniteScrollingWithActionHandler { () -> Void in
+          self.loadMore()
+        }
     }
+    
+    
+    // Have to track last tweet id - for efficient loading of tweets.
+    func loadMore() {
+        counter = defaultCount! + counter!
+        tweetParams = ["count" : String(counter!)]
+        NSLog("Current counter is \(counter)")
+        refreshTweetsWithParams(tweetParams)
+        self.tweetsTable.infiniteScrollingView.stopAnimating()
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(true)
@@ -132,9 +151,9 @@ class TweetListViewController: UIViewController ,UITableViewDataSource , UITable
                 profileImageUrl = tweet.originalUser?.profileImageUrl
                 userfullname = tweet.originalUser?.name
                 userscreenname = tweet.originalUser?.screenName
-                NSLog(" Retweeted post by \(userscreenname)")
+//                NSLog(" Retweeted post by \(userscreenname)")
             }else {
-                NSLog(" Normal post by \(userscreenname)")
+//                NSLog(" Normal post by \(userscreenname)")
                 
             }
             tc.userProfileImage.setImageWithURL(NSURL(string: profileImageUrl!))
